@@ -37,24 +37,9 @@ function saveData(e) {
   email = document.getElementById('email').value=("");
   phoneNumber = document.getElementById('phone').value=("");
   gender = document.querySelector('input[name="gen"]:checked').value=("");
-  skill = document.getElementById('result').value=("");
+  skill = document.getElementById('result').checked=("");
   state = document.getElementById('state').value=("");
   message = document.getElementById('message').value=("");
 
 }
-document.getElementById("btn").onclick = function () {
-  document.getElementById("table").style.display = "block";
 
-  var table = document.getElementById("table");
-  var row = table.insertRow(-1);
-  var fName = row.insertCell(0);
-  var lName = row.insertCell(1);
-  var email = row.insertCell(2);
-  fName.innerHTML = document.getElementById("fName").value;
-  lName.innerHTML = document.getElementById("lName").value;
-  email.innerHTML = document.getElementById("email").value;
-
-  return false;
-
- 
-}
