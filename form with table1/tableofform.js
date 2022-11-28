@@ -14,7 +14,13 @@ function fetchData() {
         <td>${myRecord[i].LastName}</td>
         <td>${myRecord[i].Email}</td>
         <td>${myRecord[i].Phone}</td>
-        <td><input type="button" value='Delete' onclick="deleteItems('${myRecord[i].id}')"></td>
+        <td><span  class="material-symbols-outlined" onclick="deleteItems('${myRecord[i].id}')">
+        delete
+        </span></td>
+        <td><span id="editBtn" class="material-symbols-outlined editBtn" data-toggle="modal" data-target="#exampleModal" onclick="editItems('${myRecord[i].id}')">
+        edit_note
+        </span></td>
+        
     </tr>`
   }
 }
@@ -26,43 +32,62 @@ function deleteItems(id) {
 
   localStorage.setItem('myRecord', JSON.stringify(myRecord))
 
-  // call the function to insert table data
   fetchData()
 }
 
-// initially it will call when first time page loads
+function editItems(id) {
+  
+  const record = myRecord.find((val) => val.id === Number(id))
+  console.log(myRecord);
+  if (record) {
+    document.getElementById('recordId').value=record.id
+    document.getElementById('fname').value = record.FirstName
+    document.getElementById('lname').value = record.LastName
+    document.getElementById('email').value = record.Email
+    document.getElementById('phone').value = record.Phone
+  }
+}
 
-// function removeMessage (id) {
-//   // iterate through the existing todoList
-//   // and using filter remove the todo that has an id
-//   // matching the todo we clicked delete on
-//   todoList = todoList.filter(
-//     function(todo) {
-//       // only return the ones that don't match
-//       return todo.id !== id;
-//     }
-//   )
+function updateItems() {
+  // Get Values From Form
+  const id = document.getElementById('recordId').value
+  const fName = document.getElementById('fname').value
+  const lName = document.getElementById('lname').value
+  const email = document.getElementById('email').value
+  const phone = document.getElementById('phone').value
 
-//tbody.innerHTML = tableRowsData;
 
-// tbody.innerHTML += `
-// <tr>
-//     <td>${localStorage.getItem('First name')}</td>
-//     <td>${localStorage.getItem('lName')}</td>
-//     <td>${localStorage.getItem('email')}</td>
-//     <td>${localStorage.getItem('phone')}</td>
-//     <td><button class="deleteBtn">Delete</button></td>
-// </tr>
-// `
 
-// function onDeleteRow(e) {
-//   if (!e.target.tbody.contains('deleteBtn')) {
-//     return
-//   }
 
-//   const btn = e.target
-//   btn.closest('tr').remove()
-// }
+  // find index for update latest value
 
-// form.addEventListener('submit', onAddValue)
-// table.addEventListener('click', onDeleteRow)
+  const index = myRecord.findIndex((val) => val.id === Number(id))
+
+
+  // assign new value in existing array
+  if (index != -1) {
+    myRecord[index] = {
+      id:id,
+      FirstName: fName,
+      LastName: lName,
+      Email: email,
+      Phone: phone,
+    }
+  }
+
+  console.log(" ## updated myRecord ## ",myRecord);
+
+  // update localStorage
+  localStorage.setItem('myRecord', JSON.stringify(myRecord))
+
+
+
+ document.getElementById('recordId').value = '';
+  document.getElementById('fname').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('phone').value = '';
+  // refresh Data
+
+  fetchData()
+}
