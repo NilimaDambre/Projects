@@ -4,10 +4,8 @@ form.addEventListener('submit', saveData)
 
 function saveData(e) {
   e.preventDefault()
-  console.log(e)
 
   myRecord.push({
-
     id: Math.floor(Math.random() * 100),
     FirstName: document.getElementById('fname').value,
     LastName: document.getElementById('lname').value,

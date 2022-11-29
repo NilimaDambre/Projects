@@ -81,7 +81,7 @@ form textarea {
 #form p {
   font-size: 20px;
 }
- table {
+table {
   border-collapse: collapse;
   border-radius: 10px;
   text-align: center;
@@ -98,7 +98,7 @@ th {
 td {
   padding: 10px 30px;
 }
-.text-muted{
+.text-muted {
   color: white !important;
 }
 .spacebetween {

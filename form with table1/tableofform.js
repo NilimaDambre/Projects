@@ -85,4 +85,3 @@ function updateItems() {
 
   fetchData()
 }
-
