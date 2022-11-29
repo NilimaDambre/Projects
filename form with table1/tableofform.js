@@ -36,11 +36,11 @@ function deleteItems(id) {
 }
 
 function editItems(id) {
-  
-  const record = myRecord.find((val) => val.id === Number(id))
-  console.log(myRecord);
+  const newRecord = JSON.parse(localStorage.getItem('myRecord'))
+  const record = newRecord.find((val) => parseInt(val.id) === parseInt(id))
+  console.log(myRecord)
   if (record) {
-    document.getElementById('recordId').value=record.id
+    document.getElementById('recordId').value = record.id
     document.getElementById('fname').value = record.FirstName
     document.getElementById('lname').value = record.LastName
     document.getElementById('email').value = record.Email
@@ -56,18 +56,14 @@ function updateItems() {
   const email = document.getElementById('email').value
   const phone = document.getElementById('phone').value
 
-
-
-
   // find index for update latest value
 
-  const index = myRecord.findIndex((val) => val.id === Number(id))
-
+  const index = myRecord.findIndex((val) => parseInt(val.id) === parseInt(id))
 
   // assign new value in existing array
   if (index != -1) {
     myRecord[index] = {
-      id:id,
+      id: id,
       FirstName: fName,
       LastName: lName,
       Email: email,
@@ -75,19 +71,18 @@ function updateItems() {
     }
   }
 
-  console.log(" ## updated myRecord ## ",myRecord);
+  console.log(' ## updated myRecord ## ', myRecord)
 
   // update localStorage
   localStorage.setItem('myRecord', JSON.stringify(myRecord))
 
-
-
- document.getElementById('recordId').value = '';
-  document.getElementById('fname').value = '';
-  document.getElementById('lname').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('phone').value = '';
+  document.getElementById('recordId').value = ''
+  document.getElementById('fname').value = ''
+  document.getElementById('lname').value = ''
+  document.getElementById('email').value = ''
+  document.getElementById('phone').value = ''
   // refresh Data
 
   fetchData()
 }
+

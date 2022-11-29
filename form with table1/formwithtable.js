@@ -7,6 +7,7 @@ function saveData(e) {
   console.log(e)
 
   myRecord.push({
+
     id: Math.floor(Math.random() * 100),
     FirstName: document.getElementById('fname').value,
     LastName: document.getElementById('lname').value,
