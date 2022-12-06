@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #212529;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  padding: 6vh 6vh;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+form h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+#form input,
+form textarea {
+  border: 0;
+  outline: none;
+  margin: 20px 0;
+  padding: 10px;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+#form a {
+  text-decoration: none;
+}
+
+.btn1 {
+  padding: 15px;
+  background-color: rgb(47, 105, 23);
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 0px auto 0;
+  border-radius: 25px;
+}
+
+#form label {
+  font-weight: 100;
+}
+
+.checkradio {
+  display: flex;
+}
+
+.radio_but {
+  margin-right: 50px;
+  float: left;
+}
+
+.check_but {
+  margin-right: 50px;
+  float: right;
+}
+
+#form p {
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+  margin: auto;
+}
+
+table td,
+table th {
+  border: solid 1px black;
+}
+
+th {
+  padding: 10px 60px;
+}
+
+td {
+  padding: 10px 30px;
+}
+
+.text-muted {
+  color: white !important;
+}
+
+.spacebetween {
+  letter-spacing: 12px;
+}
+
+.spacebetween a {
+  color: white;
+}
+
+.p-4 {
+  padding: 1rem !important;
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+}
+
+#popupform {
+  padding: 30px 30px 5px 30px;
+  border: 2px solid grey;
+}
+
+.col {
+  margin-bottom: 25px;
+}
+
+.col .btn {
+  float: right;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.form-inline {
+  display: block;
+  margin-left: auto;
+}
+
+.birthday-label-input input {
+  width: 519.19px;
+}
+
+@media only screen and (max-width: 1025px) {
+
+  th,
+  td {
+    padding: 10px 57px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .names {
+    display: block;
+  }
+
+  .firstname {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+
+  th,
+  td {
+    padding: 0px 43px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+
+  th,
+  td {
+    padding: 0px 15px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+
+  th,
+  td {
+    padding: 0px 14px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+
+  th,
+  td {
+    padding: 0px 12px;
+    font-size: 9px;
+  }
+}
