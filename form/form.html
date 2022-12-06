@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/JavaScript" defer src="./form.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./form.css" />
+
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <h3>GET IN TOUCH</h3>
+        <div class="names">
+          <input
+            type="text"
+            id="fname"
+            class="fname firstname"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            id="lname"
+            class="firstname lname"
+            placeholder="Last Name"
+          />
+        </div>
+        <input id="email" type="email" class="email" placeholder="Your Email" />
+
+        <input
+          type="text"
+          id="phone"
+          class="phone"
+          placeholder="Your Phone Number"
+        />
+        <div class="checkradio">
+          <div class="radio_but">
+            <div id="gender" class="form-check">
+              <p>Gender</p>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gen"
+                id="exampleRadios1"
+                value="male"
+                checked
+              />
+              <label class="form-check-label">
+                Male
+              </label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gen"
+                id="exampleRadios1"
+                value="female"
+                checked
+              />
+              <label class="form-check-label">
+                Female
+              </label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gen"
+                id="exampleRadios1"
+                value="other"
+                checked
+              />
+              <label class="form-check-label">
+                Other
+              </label>
+            </div>
+          </div>
+          <div class="check_but">
+            <div id="skill" class="form-check">
+              <p>Skills</p>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="skillss[]"
+                value="HTML"
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                HTML
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="skillss[]"
+                value="CSS"
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                CSS
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="skillss[]"
+                value="JAVASCRIPT"
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                JAVASCRIPT
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="skillss[]"
+                value="REACTJS"
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                REACTJS
+              </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label"><p>State</p></label>
+            <br />
+            <select id="state" id="inputState" class="form-select">
+              <option selected>Select your state</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Tamilnadu">Tamilnadu</option>
+              <option value="MP">MP</option>
+            </select>
+          </div>
+        </div>
+        <textarea
+          id="message"
+          class="message"
+          rows="5"
+          placeholder="How Can We Help You?"
+        ></textarea>
+        <button id="btn" type="submit">Submit</button>
+      </form>
+      
+    </div>
+  </body>
+</html>
